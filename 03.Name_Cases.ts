@@ -1,0 +1,18 @@
+import { join } from "path";
+
+let personName : string ='';
+personName = prompt('What is name?') || '';
+
+let lowercase : string = personName.toLowerCase();
+let uppercase : string = personName.toUpperCase();
+let titlecase : string = personName.split('').map(word =>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join('');
+
+if(personName !== null && personName ! ==''){
+    alert(`Hello${personName},Here ar your name in!:
+LowerCase : ${lowercase}
+Uppercase : ${uppercase}
+titlecase : ${titlecase}`)
+}
+else{
+    alert('please enter your name!')
+}
